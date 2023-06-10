@@ -11,8 +11,8 @@ class envs(object):
         self.max_EV2_waiting_seat = 10        
         self.current_empnum_seat_EV1 = 10
         self.current_empnum_seat_EV2 = 10
-        self.alpha1 = 20 # Price weight
-        self.alpha2 = 120  # Price traveling 
+        self.alpha1 = 2 # Price weight
+        self.alpha2 = 30  # Price traveling 
         self.alpha3 = 1  # Price waiting 
 
         self.Pr_ev1 = 200
@@ -55,8 +55,8 @@ class envs(object):
 
         self.state_ev1 = np.concatenate((self.current_res_parking_time_EV1, self.current_res_demand_EV1, self.current_seat_statue_EV1, self.current_seat_price_EV1, \
                                          self.waiting_seat_EV1, self.waiting_seat_EV1_price, self.waiting_seat_EV1_demand), axis=0) 
-        self.state_ev2 = np.concatenate((self.current_res_parking_time_EV1, self.current_res_demand_EV1, self.current_seat_statue_EV1, self.current_seat_price_EV1, \
-                                         self.waiting_seat_EV1, self.waiting_seat_EV1_price, self.waiting_seat_EV1_demand), axis=0)
+        self.state_ev2 = np.concatenate((self.current_res_parking_time_EV2, self.current_res_demand_EV2, self.current_seat_statue_EV2, self.current_seat_price_EV2, \
+                                         self.waiting_seat_EV2, self.waiting_seat_EV2_price, self.waiting_seat_EV2_demand), axis=0)
         self.states = np.vstack((self.state_ev1, self.state_ev2)) 
 
        
